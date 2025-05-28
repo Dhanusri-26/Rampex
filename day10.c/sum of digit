@@ -1,0 +1,21 @@
+#include <stdio.h>
+
+// Recursive function to calculate sum of digits
+int sum_of_digits(int n) {
+    if (n == 0)
+        return 0;
+    return (n % 10) + sum_of_digits(n / 10);
+}
+
+int main() {
+    int num;
+
+    // Input a positive integer
+    printf("Enter a number: ");
+    scanf("%d", &num);
+
+    // Output the sum of digits
+    printf("Sum of digits of %d is %d\n", num, sum_of_digits(num));
+
+    return 0;
+}

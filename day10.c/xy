@@ -1,0 +1,23 @@
+#include <stdio.h>
+
+// Recursive function to calculate x raised to the power y
+int power(int x, int y) {
+    if (y == 0)
+        return 1;  // Base case: x^0 is 1
+    else
+        return x * power(x, y - 1);  // Recursive case: x^y = x * x^(y-1)
+}
+
+int main() {
+    int base, exponent;
+
+    // Input base and exponent
+    printf("Enter base: ");
+    scanf("%d", &base);
+    printf("Enter exponent: ");
+    scanf("%d", &exponent);
+
+    // Output the result
+    printf("%d^%d = %d\n", base, exponent, power(base, exponent));
+
+    retur
