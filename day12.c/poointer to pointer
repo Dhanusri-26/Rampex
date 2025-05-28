@@ -1,0 +1,21 @@
+#include <stdio.h>
+
+int main() {
+    int value = 42;       // Declare an integer variable
+    int *ptr = &value;    // Declare a pointer to an integer and initialize it with the address of 'value'
+    int **pptr = &ptr;    // Declare a pointer to a pointer to an integer and initialize it with the address of 'ptr'
+
+    // Accessing the value of 'value' using different levels of indirection
+    printf("Value of 'value' is: %d\n", value);
+    printf("Value using *ptr: %d\n", *ptr);
+    printf("Value using **pptr: %d\n", **pptr);
+
+    // Accessing addresses
+    printf("Address of 'value': %p\n", (void*)&value);
+    printf("Address stored in ptr: %p\n", (void*)ptr);
+    printf("Address stored in pptr: %p\n", (void*)*pptr);
+    printf("Address of ptr: %p\n", (void*)&ptr);
+    printf("Address of pptr: %p\n", (void*)&pptr);
+
+    return 0;
+}

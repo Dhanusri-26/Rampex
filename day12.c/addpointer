@@ -1,0 +1,14 @@
+#include <stdio.h>
+
+int main() {
+    int num = 42;     // Declare an integer variable
+    int *ptr = &num;  // Declare a pointer and assign it the address of num
+
+    // Print the address of num using the pointer
+    printf("Address of num using pointer: %p\n", (void*)ptr);
+
+    // Optionally, print the value stored at that address
+    printf("Value at that address: %d\n", *ptr);
+
+    return 0;
+}
