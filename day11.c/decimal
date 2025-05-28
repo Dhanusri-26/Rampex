@@ -1,0 +1,25 @@
+#include <stdio.h>
+
+// Recursive function to print binary representation
+void decimalToBinary(int n) {
+    if (n > 1) {
+        decimalToBinary(n / 2);  // Recursive call with quotient
+    }
+    printf("%d", n % 2);  // Print remainder (binary digit)
+}
+
+int main() {
+    int n;
+    printf("Enter a decimal number: ");
+    scanf("%d", &n);
+
+    if (n == 0) {
+        printf("Binary representation: 0\n");
+    } else {
+        printf("Binary representation: ");
+        decimalToBinary(n);  // Start the recursion
+        printf("\n");
+    }
+
+    return 0;
+}
